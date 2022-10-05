@@ -17,10 +17,10 @@ if (animItems.length > 0) {
             pageYOffset > animItemOffset - animItemPoint &&
             pageYOffset < animItemOffset + animItemHeight
          ) {
-            animItem.classList.add('_active');
+            animItem.classList.add('animate');
          } else {
             if (!animItem.getAttribute('data-animation', 'not-repeat')) {
-               animItem.classList.remove('_active');
+               animItem.classList.remove('animate');
             }
          }
       }
