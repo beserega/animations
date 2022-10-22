@@ -209,6 +209,8 @@ function offset(el) {
 }
 .anim-block.animate {
   transform: scale(1);
+  /* если не используется функция  setTimeout */
+  transition: 0.3s;
 }
 
 /* также анимацию можно задать с помощью @keyframes */
