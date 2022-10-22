@@ -1,3 +1,6 @@
+window.onload = function () {
+
+
 const animItems = document.querySelectorAll('[data-animation]'); // ищим элементы с data- атрибутом data-animation
 if (animItems.length > 0) { // если таккие элементы на странице найдены
    // событие scroll для окна браузера при возникновения которого выполняется функция animScroll()
@@ -47,3 +50,6 @@ function offset(el) {
       scrollTop = window.pageYOffset || document.documentElement.scrollTop;
    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 }
+   
+   
+}// onload
