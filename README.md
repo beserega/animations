@@ -116,7 +116,7 @@ if (!animItem.getAttribute('data-animation', 'not-repeat')) {
 ```
 <br>
 
-Заключаем весь скрипт описаный выше в функцию ``animScroll()``
+Заключаем весь скрипт описаный выше в функцию ``animScroll()`` И сразу объявим эту функцию. Данное действие позволит анимировать элементы находящиеся во время загрузки страницы в зоне видимости скрипта и изначально имеющие класс "animate". Например такие как логотип или заголовок.
 ```javascript
    function animScroll(params) {
       for (let i = 0; i < animItems.length; i++) { 
@@ -137,13 +137,15 @@ if (!animItem.getAttribute('data-animation', 'not-repeat')) {
          }
       }
    }
+   animScroll()
 ```
-Зададим время анимации с помощью функции ``setTimeout`` для нашей функции ``animScroll()``
+Время анимации можно задать с помощью функции ``setTimeout``
 ```javascript
 setTimeout(() => {
     animScroll();
 }, 300);
 ```
+Либо с помощью css свойства ``transition``<br><br>
 Создадим событие ``scroll`` для окна браузера при возникновения которого будет выполняется функция ``animScroll()``
 ```javascript
 window.addEventListener('scroll', animScroll);
@@ -195,8 +197,33 @@ function offset(el) {
 }
 ```
 И непосредственно сама анимация будет описана в css при добавлении класса ``animate``
+Не большой пример:
+```html
+<div class="anim-block" data-animation>
+ 
+</div>
+```
+```css
+.anim-block {
+  transform: scale(0);
+}
+.anim-block.animate {
+  transform: scale(1);
+}
 
-
+/* также анимацию можно задать с помощью @keyframes */
+.anim-block.animate {
+ animation: scale 15s linear infinite;
+}
+@keyframes scale {
+  from { 
+    transform: scale(0); 
+  }
+  to { 
+    transform: scale(1);
+  }
+}
+```
 
 
 
