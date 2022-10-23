@@ -25,12 +25,12 @@ body{
   object-fit: cover;
 }
 
-.anim-block {
+.anim-block-one {
   transform: scale(0);
   opacity: 0;
 }
 
-.anim-block.animate {
+.anim-block-one.animate {
   transform: scale(1);
   opacity: 1;
   transition: all 2s ease 0s;
