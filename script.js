@@ -28,12 +28,16 @@ if (animItems.length > 0) { // если таккие элементы на ст�
          // меньше чем позиция объекта плюс его высота в этот момент
          if (pageYOffset > animItemOffset - animItemPoint && pageYOffset < animItemOffset + animItemHeight) {
             // добовляем класс animate к объекту
-            animItem.classList.add('animate');
+            if(!animItem.classList.contains('animate')) {
+               animItem.classList.add('animate');
+            }
          } else {
             // если у атрибута data-animation нет ни каких параметров анимация бутет повторятся при следующим скроле
             // если у атрибута data-animation имеет параметр data-animation="not-repeat" повтора анимации не будет
             if (!animItem.getAttribute('data-animation', 'not-repeat')) {
+               if(animItem.classList.contains('animate')) {
                animItem.classList.remove('animate');
+            }
             }
          }
       }
