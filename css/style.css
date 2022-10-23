@@ -1,37 +1,118 @@
-
-*{
-  box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
 
-body{
-  margin: 0;
+body {
+	margin: 0;
 }
 
 .container {
-  width: 100%;
-  height: 1500px;
-  max-width: 800px;
-  margin: 100px auto 0 auto;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding-top: 100px;
 }
 
-.anim-block {
-  width: 100%;
-  overflow: hidden;
-  border: 5px solid blue;
+.screen {
+	height: 100vh;
 }
 
-.anim-block img {
-  width: 100%;
-  object-fit: cover;
+.screen-two {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.anim-block-one {
-  transform: scale(0);
-  opacity: 0;
+.text {
+	width: 100%;
+	text-align: center;
 }
 
-.anim-block-one.animate {
-  transform: scale(1);
-  opacity: 1;
-  transition: all 2s ease 0s;
-} 
+.button-block {
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+}
+
+.button-arrow {
+	position: relative;
+	width: 50px;
+	cursor: pointer;
+	border: 0;
+	background: none;
+
+}
+
+.arrow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	bottom: 0;
+	animation: arrowDown 2s infinite;
+}
+
+.arrow.two {
+	opacity: 0;
+	animation-delay: 1s;
+}
+
+.arrow img {
+	width: 100%;
+}
+
+@keyframes arrowDown {
+	from {
+		bottom: 30px;
+		opacity: 1;
+	}
+
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+
+}
+
+.block {
+	width: 100%;
+	background: rgba(0, 0, 0, 0.171);
+	margin-bottom: 30px;
+	padding: 30px 10px;
+	border-radius: 5px;
+	color: blue;
+}
+
+.block-one {
+	transform: scale(0);
+	opacity: 0;
+}
+
+.block-one.animate {
+	transform: scale(1);
+	opacity: 1;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.image-block {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	opacity: 0;
+}
+
+.image-block.animate {
+	transform: scale(1) rotate(720deg);
+	opacity: 1;
+	transition: all 1s ease-in-out 0s;
+}
+
+.image-block img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

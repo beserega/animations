@@ -1,16 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Анимация элементов при скроллу</title>
-	<link rel="stylesheet" href="https://beserega.github.io/animations/css/style.css">
-  	
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<div class="container">
-	
-</div>
-	<script type="text/javascript" src="https://beserega.github.io/animations/js/js.js"></script>
+	<div class="container">
+		<div class="screen screen-one">
+			<div data-animation class="block block-one">
+				Элемент находящиеся во время загрузки страницы в зоне видимости скрипта "data-animation" неимеет значений
+			</div>
+			<div data-animation="not-repeat" class="block block-one">
+				Элемент находящиеся во время загрузки страницы в зоне видимости скрипта "data-animation='not-repeat'"
+			</div>
+			<div class="text">
+				Следующий блок у "data-animation" отсутствует значение "not-repeat". И при повторном скроле анимация будет повторяться
+			</div>
+			<div class="button-block">
+				<button type="button" class="button-arrow">
+					<div class="arrow one">
+						<img src="https://cdn-icons-png.flaticon.com/512/32/32195.png" alt="Image">
+					</div>
+					<div class="arrow two">
+						<img src="https://cdn-icons-png.flaticon.com/512/32/32195.png" alt="Image">
+					</div>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div id="screen-two" class="screen screen-two">
+		<div data-animation class="image-block">
+			<img src="http://drasler.ru/wp-content/uploads/2019/01/suicide-squad-harley-quinn-art-vzgliad-litso-khvostiki-zhvac.jpg" alt="Image">
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/js.js"></script>
 </body>
+
 </html>
