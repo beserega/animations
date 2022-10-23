@@ -19,9 +19,9 @@ body{
   width: 100%;
   object-fit: cover;
 }
-.anim-block {
+/* .anim-block {
   transform: translateY(-150%);
 }
 .anim-block .animate {
   transform: translateY(0);
-} 
+}  */
