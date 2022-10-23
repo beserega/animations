@@ -139,7 +139,7 @@ if (!animItem.getAttribute('data-animation', 'not-repeat')) {
    }
    animScroll()
 ```
-Время анимации можно задать с помощью функции ``setTimeout``
+Время задержки анимации можно задать с помощью функции ``setTimeout``
 ```javascript
 setTimeout(() => {
     animScroll();
@@ -186,7 +186,7 @@ if (animItems.length > 0) {
    }
    setTimeout(() => {
       animScroll();
-   }, 300); // время анимации
+   }, 300); // время задержки анимации
 }
 
 function offset(el) {
