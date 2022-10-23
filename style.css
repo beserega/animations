@@ -1,1 +1,27 @@
 
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+}
+.container{
+  width:100%;
+  max-width:800px;
+  margin:100px auto 0 auto;
+}
+.anim-block{
+  width:100%;
+  overflow:hidden;
+  border: 5px solid blue;
+}
+.anim-block img{
+  width:100%
+}
+.anim-block{
+  transform: translateY(-150%);
+}
+.anim-block.animate{
+  transform: translateY(0);
+} 
+
