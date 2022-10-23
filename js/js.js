@@ -3,7 +3,7 @@ window.onload = function () {
 
 const animItems = document.querySelectorAll('[data-animation]'); // ищим элементы с data- атрибутом data-animation
 if (animItems.length > 0) { // если таккие элементы на странице найдены
-   console.log('Ура!!! На нашей странице будет анимация!' + animItems);
+   console.log('Ура!!! На нашей странице будет анимация!' + animItems.length);
    // событие scroll для окна браузера при возникновения которого выполняется функция animScroll()
    window.addEventListener('scroll', animScroll);
    // функция animScroll()
